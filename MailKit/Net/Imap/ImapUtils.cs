@@ -431,7 +431,7 @@ namespace MailKit.Net.Imap {
 			}
 
 			// parse the folder name
-			token = engine.ReadToken (ic.CancellationToken);
+			token = engine.ReadToken (ImapStream.StringSpecials, ic.CancellationToken);
 
 			switch (token.Type) {
 			case ImapTokenType.Literal:
